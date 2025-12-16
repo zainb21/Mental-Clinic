@@ -1,0 +1,122 @@
+/* Pistachio theme + Merienda One font */
+:root{
+  --bg: #E3F8D6;
+  --mint: #98D1A8;
+  --mint-dark: #4C8F6B;
+  --card: #ffffff;
+  --black: #000000;
+  --muted: #506957;
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family: 'Merienda One', cursive;
+  color:var(--black);
+  background:var(--bg);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+
+/* Header */
+.site-header{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:16px 20px;
+}
+.brand h1{margin:0;font-size:20px}
+.brand .tagline{margin:4px 0 0;font-size:13px;color:var(--muted)}
+
+/* Menu button */
+.menu-btn{
+  font-size:26px;
+  cursor:pointer;
+  padding:6px 10px;
+  border-radius:8px;
+  background:transparent;
+  transition:transform .2s ease;
+}
+.menu-btn:active{transform:scale(.95)}
+
+/* Side menu */
+.side-menu{
+  width:260px;
+  background:linear-gradient(180deg,var(--mint),#d6f0dc);
+  position:fixed;
+  top:0;
+  right:-320px;
+  height:100%;
+  padding:28px 20px;
+  transition:right .35s ease, box-shadow .35s ease;
+  box-shadow:-6px 0 18px rgba(0,0,0,.06);
+  z-index:1200;
+}
+.side-menu.open{right:0;box-shadow:-8px 0 26px rgba(0,0,0,.12)}
+.side-menu a{display:block;margin:14px 0;color:var(--black);text-decoration:none;font-size:18px}
+.side-menu .close-menu{background:transparent;border:0;font-size:20px;cursor:pointer;display:block;margin-bottom:10px}
+
+/* Hero */
+.hero{position:relative;overflow:hidden;border-radius:12px;margin:18px 20px;}
+.hero-img{width:100%;height:360px;object-fit:cover;display:block;border-radius:12px;filter:contrast(.98) saturate(.95)}
+
+/* Sections */
+main{padding:8px 20px 60px}
+.section-title{font-size:20px;margin:12px 0;color:var(--mint-dark)}
+
+/* Services grid */
+.services-grid{display:flex;flex-wrap:wrap;gap:18px;justify-content:center}
+.service-card{background:var(--card);border:1px solid rgba(0,0,0,0.05);border-radius:12px;padding:18px;width:260px;text-align:center;box-shadow:0 6px 18px rgba(0,0,0,0.04);transition:transform .28s ease, box-shadow .28s ease;outline:none}
+.service-card:focus, .service-card:hover{transform:translateY(-6px);box-shadow:0 10px 28px rgba(0,0,0,0.08)}
+.service-card h3{margin:6px 0 8px}
+.service-card p{font-size:14px;color:var(--muted);min-height:48px}
+
+/* Doctor */
+.doctor-section{margin-top:16px}
+.doctor-card{display:flex;gap:16px;align-items:center;background:var(--card);padding:14px;border-radius:12px;border:1px solid rgba(0,0,0,0.04);max-width:880px;margin:0 auto;box-shadow:0 8px 20px rgba(0,0,0,0.04)}
+.doctor-card img{width:140px;height:140px;object-fit:cover;border-radius:10px;flex-shrink:0;border:2px solid rgba(0,0,0,0.03)}
+.doctor-info h3{margin:0 0 6px}
+.doctor-info p{margin:0 0 8px;color:var(--muted)}
+
+/* Reviews slider */
+.reviews-wrap{display:flex;align-items:center;gap:10px;max-width:900px;margin:10px auto}
+.reviews{display:flex;overflow:hidden;width:720px;border-radius:10px}
+.review-card{min-width:720px;padding:22px;background:var(--card);border-radius:8px;margin-right:12px;box-shadow:0 6px 18px rgba(0,0,0,0.04);flex-shrink:0;transition:transform .4s ease, opacity .4s ease;opacity:.6}
+.review-card.active{opacity:1;transform:translateX(0)}
+.quote{font-style:italic;margin:0 0 10px}
+.who{margin:0;color:var(--muted);font-weight:600}
+.slide-btn{background:var(--mint);border:0;border-radius:8px;padding:10px 12px;font-size:22px;cursor:pointer}
+
+/* Buttons */
+.btn{display:inline-block;padding:10px 14px;border-radius:8px;border:0;background:transparent;cursor:pointer;text-decoration:none;color:var(--black);font-weight:600}
+.btn.primary{background:var(--mint);color:var(--black)}
+
+/* Footer */
+.site-footer{padding:18px;text-align:center;color:var(--muted);margin-top:26px}
+
+/* Appointment layout */
+.appointment-main{display:flex;gap:20px;align-items:flex-start;padding:20px;flex-wrap:wrap}
+.form-card{flex:1;max-width:560px;background:var(--card);padding:20px;border-radius:10px;border:1px solid rgba(0,0,0,0.03)}
+.form-card label{display:block;margin-top:12px;font-weight:700}
+.form-card input,.form-card select,.form-card textarea{width:100%;padding:10px;border-radius:8px;border:1px solid #e6efe6;margin-top:6px;font-family:inherit}
+
+/* Appointments list */
+.appointments-list{flex:1;max-width:420px;background:transparent;padding:10px}
+#list-container .appointment-item{background:var(--card);padding:12px;border-radius:8px;margin-bottom:12px;border:1px solid rgba(0,0,0,0.03)}
+
+/* Responsive tweaks */
+@media (max-width:900px){
+  .hero-img{height:240px}
+  .reviews{width:100%;min-width:0}
+  .review-card{min-width:100%}
+  .doctor-card{flex-direction:column;align-items:flex-start}
+  .doctor-card img{width:100%;height:auto}
+  .services-grid{justify-content:center}
+}
+.review-card {
+  display: none;
+}
+
+.review-card.active {
+  display: block;
+}

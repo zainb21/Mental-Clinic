@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Book Appointment - Mental Wellness Clinic</title>
+  <link href="https://fonts.googleapis.com/css2?family=Merienda+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">
+      <h1>Book Appointment</h1>
+    </div>
+    <div id="menu-btn" class="menu-btn" aria-label="menu">☰</div>
+  </header>
+
+  <nav id="side-menu" class="side-menu" aria-hidden="true">
+    <button id="close-menu" class="close-menu">✕</button>
+    <a href="login.html">Login</a>
+    <a href="settings.html">Settings</a>
+    <a href="support.html">Support</a>
+    <a href="about.html">About Clinic</a>
+    <a href="contact.html">Contact Us</a>
+  </nav>
+
+  <main class="appointment-main">
+    <section class="form-card">
+      <h2>Appointment Form</h2>
+      <form id="appointmentForm" novalidate>
+        <label for="name">Full Name</label>
+        <input id="name" name="name" type="text" placeholder="Your full name" required>
+
+        <label for="phone">Phone Number</label>
+        <input id="phone" name="phone" type="tel" placeholder="+964 ..." required>
+
+        <label for="age">Age</label>
+        <input id="age" name="age" type="number" min="10" max="120" placeholder="Your age">
+
+        <label for="date">Preferred Date</label>
+        <input id="date" name="date" type="date" required>
+
+        <label for="therapist">Choose Therapist</label>
+        <select id="therapist" name="therapist" required>
+          <option value="">-- choose --</option>
+          <option>Dr. Zaya Alsamerai</option>
+        </select>
+
+        <label for="notes">Notes (optional)</label>
+        <textarea id="notes" name="notes" rows="4" placeholder="Any details..."></textarea>
+
+        <div class="form-actions">
+          <button class="btn primary" type="submit">Reserve</button>
+          <button class="btn" type="button" id="view-appointments">View My Appointments</button>
+        </div>
+
+        <p id="message" class="form-message" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+
+    <section class="appointments-list" id="appointments-list">
+      <h3>Your Appointments</h3>
+      <div id="list-container"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="year2"></span> Mental Wellness Clinic</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

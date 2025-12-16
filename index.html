@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Mental Clinic</title>
+  <link href="https://fonts.googleapis.com/css2?family=Merienda+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">
+      <h1>Mental Clinic</h1>
+      <p class="tagline">Feel Safe here :) </p>
+    </div>
+    <div id="menu-btn" class="menu-btn" aria-label="menu">☰</div>
+  </header>
+
+  <nav id="side-menu" class="side-menu" aria-hidden="true">
+    <button id="close-menu" class="close-menu">✕</button>
+    <a href="login.html">Login</a>
+    <a href="settings.html">Settings</a>
+    <a href="support.html">Support</a>
+    <a href="about.html">About Clinic</a>
+    <a href="contact.html">Contact Us</a>
+  </nav>
+
+  <main>
+    <!-- Hero: couch image only, no text on the image per request -->
+    <section class="hero">
+      <img class="hero-img" src="https://images.unsplash.com/photo-1554995207-c18c203602cb?q=80&w=1500&auto=format&fit=crop&ixlib=rb-4.0.3&s=b2d5a3f1f4b8c6d1c7e8a9b0c2d3e4f5" alt="clinic couch">
+    </section>
+
+    <!-- Services -->
+    <section class="services-section">
+      <h2 class="section-title">Our Services</h2>
+      <div class="services-grid">
+        <article class="service-card" tabindex="0">
+          <h3>Anxiety Treatment</h3>
+          <p>Evidence‑based approaches to reduce worry and regain calm.</p>
+          <a class="btn" href="appointment.html">Book</a>
+        </article>
+        <article class="service-card" tabindex="0">
+          <h3>Depression Support</h3>
+          <p>Compassionate therapy to help you move forward step by step.</p>
+          <a class="btn" href="appointment.html">Book</a>
+        </article>
+        <article class="service-card" tabindex="0">
+          <h3>Family Counseling</h3>
+          <p>Improve communication and healing within family relationships.</p>
+          <a class="btn" href="appointment.html">Book</a>
+        </article>
+        <article class="service-card" tabindex="0">
+          <h3>Assessments</h3>
+          <p>Professional assessments to map out the best treatment plan.</p>
+          <a class="btn" href="appointment.html">Book</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- Doctor card using user's photo -->
+    <section class="doctor-section">
+      <h2 class="section-title">Meet Our Lead</h2>
+      <div class="doctor-card highlighted">
+        <img src="assets/dr_zaya.jpg" alt="Dr. Zaya Alsamerai">
+        <div class="doctor-info">
+          <h3>Dr. Zaya Alsamerai</h3>
+          <p>Clinical Psychologist • Special interest in anxiety & trauma • 5+ years experience</p>
+          <a class="btn primary" href="appointment.html">Book with Dr. Zaya</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Reviews slider -->
+    <section class="reviews-section">
+      <h2 class="section-title">What patients say</h2>
+      <div class="reviews-wrap">
+        <button id="prev" class="slide-btn" aria-label="previous">‹</button>
+        <div id="reviews" class="reviews">
+          <div class="review-card active">
+            <p class="quote">"Dr. Zaya helped me find calm again — attentive and gentle."</p>
+            <p class="who">— Maryam</p>
+          </div>
+          <div class="review-card">
+            <p class="quote">"Professional and warm sessions. Highly recommend."</p>
+            <p class="who">— Youser</p>
+          </div>
+          <div class="review-card">
+            <p class="quote">"A safe space to share and heal."</p>
+            <p class="who">— Tabarak</p>
+          </div>
+          <div class="review-card">
+            <p class="quote">"Helped me of the trauma I experienced because of my friends ."</p>
+            <p class="who">— Hussein</p>
+          </div>
+        </div>
+        <button id="next" class="slide-btn" aria-label="next">›</button>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="year"></span> Mental Clinic</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
