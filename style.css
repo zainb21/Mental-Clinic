@@ -113,6 +113,10 @@ main{padding:8px 20px 60px}
   .doctor-card img{width:100%;height:auto}
   .services-grid{justify-content:center}
 }
+.contact-card img{
+  width: 400px;
+  height: auto;
+}
 .review-card {
   display: none;
 }
